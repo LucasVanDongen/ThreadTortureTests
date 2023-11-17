@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		A01ADE692B075B7D00598D17 /* Thread_Torture_Tests.docc in Sources */ = {isa = PBXBuildFile; fileRef = A01ADE682B075B7D00598D17 /* Thread_Torture_Tests.docc */; };
-		A01ADE6F2B075B7D00598D17 /* Thread_Torture_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A01ADE642B075B7D00598D17 /* Thread_Torture_Tests.framework */; };
-		A01ADE742B075B7D00598D17 /* Thread_Torture_TestsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01ADE732B075B7D00598D17 /* Thread_Torture_TestsTests.swift */; };
+		A01ADE6F2B075B7D00598D17 /* Thread_Torture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A01ADE642B075B7D00598D17 /* Thread_Torture.framework */; };
+		A01ADE742B075B7D00598D17 /* StaticResourceTortureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01ADE732B075B7D00598D17 /* StaticResourceTortureTests.swift */; };
 		A01ADE752B075B7E00598D17 /* Thread_Torture_Tests.h in Headers */ = {isa = PBXBuildFile; fileRef = A01ADE672B075B7D00598D17 /* Thread_Torture_Tests.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A01ADE7F2B07958600598D17 /* CustomGlobalActorTortureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01ADE7E2B07958600598D17 /* CustomGlobalActorTortureTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,11 +25,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A01ADE642B075B7D00598D17 /* Thread_Torture_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Thread_Torture_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A01ADE642B075B7D00598D17 /* Thread_Torture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Thread_Torture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A01ADE672B075B7D00598D17 /* Thread_Torture_Tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Thread_Torture_Tests.h; sourceTree = "<group>"; };
 		A01ADE682B075B7D00598D17 /* Thread_Torture_Tests.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Thread_Torture_Tests.docc; sourceTree = "<group>"; };
-		A01ADE6E2B075B7D00598D17 /* Thread Torture TestsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Thread Torture TestsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A01ADE732B075B7D00598D17 /* Thread_Torture_TestsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thread_Torture_TestsTests.swift; sourceTree = "<group>"; };
+		A01ADE6E2B075B7D00598D17 /* Thread TortureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Thread TortureTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A01ADE732B075B7D00598D17 /* StaticResourceTortureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticResourceTortureTests.swift; sourceTree = "<group>"; };
+		A01ADE7E2B07958600598D17 /* CustomGlobalActorTortureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomGlobalActorTortureTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A01ADE6F2B075B7D00598D17 /* Thread_Torture_Tests.framework in Frameworks */,
+				A01ADE6F2B075B7D00598D17 /* Thread_Torture.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,8 +55,8 @@
 		A01ADE5A2B075B7D00598D17 = {
 			isa = PBXGroup;
 			children = (
-				A01ADE662B075B7D00598D17 /* Thread Torture Tests */,
-				A01ADE722B075B7D00598D17 /* Thread Torture TestsTests */,
+				A01ADE662B075B7D00598D17 /* Thread Torture */,
+				A01ADE722B075B7D00598D17 /* Thread Torture Tests */,
 				A01ADE652B075B7D00598D17 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -62,27 +64,28 @@
 		A01ADE652B075B7D00598D17 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A01ADE642B075B7D00598D17 /* Thread_Torture_Tests.framework */,
-				A01ADE6E2B075B7D00598D17 /* Thread Torture TestsTests.xctest */,
+				A01ADE642B075B7D00598D17 /* Thread_Torture.framework */,
+				A01ADE6E2B075B7D00598D17 /* Thread TortureTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A01ADE662B075B7D00598D17 /* Thread Torture Tests */ = {
+		A01ADE662B075B7D00598D17 /* Thread Torture */ = {
 			isa = PBXGroup;
 			children = (
 				A01ADE672B075B7D00598D17 /* Thread_Torture_Tests.h */,
 				A01ADE682B075B7D00598D17 /* Thread_Torture_Tests.docc */,
 			);
-			path = "Thread Torture Tests";
+			path = "Thread Torture";
 			sourceTree = "<group>";
 		};
-		A01ADE722B075B7D00598D17 /* Thread Torture TestsTests */ = {
+		A01ADE722B075B7D00598D17 /* Thread Torture Tests */ = {
 			isa = PBXGroup;
 			children = (
-				A01ADE732B075B7D00598D17 /* Thread_Torture_TestsTests.swift */,
+				A01ADE732B075B7D00598D17 /* StaticResourceTortureTests.swift */,
+				A01ADE7E2B07958600598D17 /* CustomGlobalActorTortureTests.swift */,
 			);
-			path = "Thread Torture TestsTests";
+			path = "Thread Torture Tests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,9 +102,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		A01ADE632B075B7D00598D17 /* Thread Torture Tests */ = {
+		A01ADE632B075B7D00598D17 /* Thread Torture */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A01ADE782B075B7E00598D17 /* Build configuration list for PBXNativeTarget "Thread Torture Tests" */;
+			buildConfigurationList = A01ADE782B075B7E00598D17 /* Build configuration list for PBXNativeTarget "Thread Torture" */;
 			buildPhases = (
 				A01ADE5F2B075B7D00598D17 /* Headers */,
 				A01ADE602B075B7D00598D17 /* Sources */,
@@ -112,14 +115,14 @@
 			);
 			dependencies = (
 			);
-			name = "Thread Torture Tests";
+			name = "Thread Torture";
 			productName = "Thread Torture Tests";
-			productReference = A01ADE642B075B7D00598D17 /* Thread_Torture_Tests.framework */;
+			productReference = A01ADE642B075B7D00598D17 /* Thread_Torture.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		A01ADE6D2B075B7D00598D17 /* Thread Torture TestsTests */ = {
+		A01ADE6D2B075B7D00598D17 /* Thread TortureTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A01ADE7B2B075B7E00598D17 /* Build configuration list for PBXNativeTarget "Thread Torture TestsTests" */;
+			buildConfigurationList = A01ADE7B2B075B7E00598D17 /* Build configuration list for PBXNativeTarget "Thread TortureTests" */;
 			buildPhases = (
 				A01ADE6A2B075B7D00598D17 /* Sources */,
 				A01ADE6B2B075B7D00598D17 /* Frameworks */,
@@ -130,9 +133,9 @@
 			dependencies = (
 				A01ADE712B075B7D00598D17 /* PBXTargetDependency */,
 			);
-			name = "Thread Torture TestsTests";
+			name = "Thread TortureTests";
 			productName = "Thread Torture TestsTests";
-			productReference = A01ADE6E2B075B7D00598D17 /* Thread Torture TestsTests.xctest */;
+			productReference = A01ADE6E2B075B7D00598D17 /* Thread TortureTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -153,7 +156,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A01ADE5E2B075B7D00598D17 /* Build configuration list for PBXProject "Thread Torture Tests" */;
+			buildConfigurationList = A01ADE5E2B075B7D00598D17 /* Build configuration list for PBXProject "Thread Torture" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -166,8 +169,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A01ADE632B075B7D00598D17 /* Thread Torture Tests */,
-				A01ADE6D2B075B7D00598D17 /* Thread Torture TestsTests */,
+				A01ADE632B075B7D00598D17 /* Thread Torture */,
+				A01ADE6D2B075B7D00598D17 /* Thread TortureTests */,
 			);
 		};
 /* End PBXProject section */
@@ -202,7 +205,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A01ADE742B075B7D00598D17 /* Thread_Torture_TestsTests.swift in Sources */,
+				A01ADE742B075B7D00598D17 /* StaticResourceTortureTests.swift in Sources */,
+				A01ADE7F2B07958600598D17 /* CustomGlobalActorTortureTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,7 +215,7 @@
 /* Begin PBXTargetDependency section */
 		A01ADE712B075B7D00598D17 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A01ADE632B075B7D00598D17 /* Thread Torture Tests */;
+			target = A01ADE632B075B7D00598D17 /* Thread Torture */;
 			targetProxy = A01ADE702B075B7D00598D17 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -436,7 +440,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A01ADE5E2B075B7D00598D17 /* Build configuration list for PBXProject "Thread Torture Tests" */ = {
+		A01ADE5E2B075B7D00598D17 /* Build configuration list for PBXProject "Thread Torture" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A01ADE762B075B7E00598D17 /* Debug */,
@@ -445,7 +449,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A01ADE782B075B7E00598D17 /* Build configuration list for PBXNativeTarget "Thread Torture Tests" */ = {
+		A01ADE782B075B7E00598D17 /* Build configuration list for PBXNativeTarget "Thread Torture" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A01ADE792B075B7E00598D17 /* Debug */,
@@ -454,7 +458,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A01ADE7B2B075B7E00598D17 /* Build configuration list for PBXNativeTarget "Thread Torture TestsTests" */ = {
+		A01ADE7B2B075B7E00598D17 /* Build configuration list for PBXNativeTarget "Thread TortureTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A01ADE7C2B075B7E00598D17 /* Debug */,
