@@ -11,7 +11,7 @@ import XCTest
 class Actorless {
     private(set) var sum: Int!
 
-    func add() -> Int {
+    func add() -> Int? {
         sum = nil
         sum = 1
         return sum
@@ -23,13 +23,13 @@ class Actorless {
 class ActoredClass {
     private(set) var sum: Int!
 
-    func add() -> Int {
+    func add() -> Int? {
         sum = nil
         sum = 1
         return sum
     }
 
-    func addWithoutActor() -> Int {
+    func addWithoutActor() -> Int? {
         sum = nil
         sum = 1
         return sum
@@ -41,7 +41,7 @@ class ActoredFunction {
     private(set) var sum: Int!
 
     @StateActor
-    func add() -> Int {
+    func add() -> Int? {
         sum = nil
         sum = 1
         return sum
@@ -81,7 +81,10 @@ final class CustomGlobalActorTortureTests: XCTestCase {
 
             for _ in 1...1000 {
                 DispatchQueue.global().async {
-                    _ = obj.add() // ⚠️ Call to global actor 'StateActor'-isolated instance method 'add()' in a synchronous nonisolated context; this is an error in Swift 6
+                    let result = obj.add()
+                    DispatchQueue.main.async {
+                        XCTAssertNotNil(result) // ⚠️ Call to global actor 'StateActor'-isolated instance method 'add()' in a synchronous nonisolated context; this is an error in Swift 6
+                    }
                 }
             }
         }
@@ -102,7 +105,10 @@ final class CustomGlobalActorTortureTests: XCTestCase {
 
                 DispatchQueue.global().async {
                     Task { @StateActor in
-                        _ = obj.add()
+                        let result = obj.add()
+                        DispatchQueue.main.async {
+                            XCTAssertNotNil(result)
+                        }
                     }
                 }
             }
@@ -124,7 +130,10 @@ final class CustomGlobalActorTortureTests: XCTestCase {
 
                 DispatchQueue.global().async {
                     Task {
-                        _ = await obj.add()
+                        let result = await obj.add()
+                        DispatchQueue.main.sync {
+                            XCTAssertNotNil(result)
+                        }
                     }
                 }
             }

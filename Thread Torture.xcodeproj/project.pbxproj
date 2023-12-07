@@ -12,6 +12,10 @@
 		A01ADE742B075B7D00598D17 /* StaticResourceTortureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01ADE732B075B7D00598D17 /* StaticResourceTortureTests.swift */; };
 		A01ADE752B075B7E00598D17 /* Thread_Torture_Tests.h in Headers */ = {isa = PBXBuildFile; fileRef = A01ADE672B075B7D00598D17 /* Thread_Torture_Tests.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A01ADE7F2B07958600598D17 /* CustomGlobalActorTortureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01ADE7E2B07958600598D17 /* CustomGlobalActorTortureTests.swift */; };
+		A0C642D62B1B38D50049E176 /* FormatterBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C642D52B1B38D50049E176 /* FormatterBuilder.swift */; };
+		A0C642D82B1B38FD0049E176 /* CustomActorFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C642D72B1B38FD0049E176 /* CustomActorFormatter.swift */; };
+		A0C642DA2B1B3A1B0049E176 /* ActorFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C642D92B1B3A1B0049E176 /* ActorFormatter.swift */; };
+		A0C642DC2B1D2A4A0049E176 /* NonActorFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C642DB2B1D2A4A0049E176 /* NonActorFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +35,10 @@
 		A01ADE6E2B075B7D00598D17 /* Thread TortureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Thread TortureTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A01ADE732B075B7D00598D17 /* StaticResourceTortureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticResourceTortureTests.swift; sourceTree = "<group>"; };
 		A01ADE7E2B07958600598D17 /* CustomGlobalActorTortureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomGlobalActorTortureTests.swift; sourceTree = "<group>"; };
+		A0C642D52B1B38D50049E176 /* FormatterBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatterBuilder.swift; sourceTree = "<group>"; };
+		A0C642D72B1B38FD0049E176 /* CustomActorFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomActorFormatter.swift; sourceTree = "<group>"; };
+		A0C642D92B1B3A1B0049E176 /* ActorFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorFormatter.swift; sourceTree = "<group>"; };
+		A0C642DB2B1D2A4A0049E176 /* NonActorFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonActorFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,10 +90,22 @@
 		A01ADE722B075B7D00598D17 /* Thread Torture Tests */ = {
 			isa = PBXGroup;
 			children = (
-				A01ADE732B075B7D00598D17 /* StaticResourceTortureTests.swift */,
+				A0C642D42B1B38B30049E176 /* ExtensionTests */,
 				A01ADE7E2B07958600598D17 /* CustomGlobalActorTortureTests.swift */,
 			);
 			path = "Thread Torture Tests";
+			sourceTree = "<group>";
+		};
+		A0C642D42B1B38B30049E176 /* ExtensionTests */ = {
+			isa = PBXGroup;
+			children = (
+				A01ADE732B075B7D00598D17 /* StaticResourceTortureTests.swift */,
+				A0C642D52B1B38D50049E176 /* FormatterBuilder.swift */,
+				A0C642DB2B1D2A4A0049E176 /* NonActorFormatter.swift */,
+				A0C642D92B1B3A1B0049E176 /* ActorFormatter.swift */,
+				A0C642D72B1B38FD0049E176 /* CustomActorFormatter.swift */,
+			);
+			path = ExtensionTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,8 +225,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0C642D82B1B38FD0049E176 /* CustomActorFormatter.swift in Sources */,
+				A0C642DA2B1B3A1B0049E176 /* ActorFormatter.swift in Sources */,
+				A0C642DC2B1D2A4A0049E176 /* NonActorFormatter.swift in Sources */,
 				A01ADE742B075B7D00598D17 /* StaticResourceTortureTests.swift in Sources */,
 				A01ADE7F2B07958600598D17 /* CustomGlobalActorTortureTests.swift in Sources */,
+				A0C642D62B1B38D50049E176 /* FormatterBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +306,7 @@
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = complete;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -340,6 +365,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_STRICT_CONCURRENCY = complete;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -365,14 +391,18 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
 				PRODUCT_BUNDLE_IDENTIFIER = "dev.lucasvandongen.Thread-Torture-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -396,14 +426,18 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
 				PRODUCT_BUNDLE_IDENTIFIER = "dev.lucasvandongen.Thread-Torture-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -414,11 +448,15 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3RR8WDK6W2;
 				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "dev.lucasvandongen.Thread-Torture-TestsTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -429,11 +467,15 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3RR8WDK6W2;
 				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "dev.lucasvandongen.Thread-Torture-TestsTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
